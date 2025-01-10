@@ -1,32 +1,32 @@
-//API URL med delar gömda i local storage.
+
 const baseUrl = "https://cdn.contentful.com/spaces/";
 const spaceId = localStorage.getItem("space_id");
 const accessToken = localStorage.getItem("access_token");
 const apiURL = `https://cdn.contentful.com/spaces/${spaceId}/entries/?access_token=${accessToken}&content_type=artist`;
 
-//Hämta från HTML både artist cards och filterfunktion.
+
 const dataContainer = document.querySelector("#cardContainer");
 const genreFilter = document.querySelector("#genreFilter");
 const dayFilter = document.querySelector("#dayFilter");
 const stageFilter = document.querySelector("#stageFilter");
 
-//hämta data till filter funktion utan att behöva göra API anrop igen.
+
 let artistsData = [];
 let entries = [];
 
 const fetchData = async () => {
-  const response = await fetch(apiURL); //Hämta data från API.
+  const response = await fetch(apiURL);
 
   if (!response.ok) {
-    throw new Error("HTTP-fel!"); //Om den inte kan hämta så syns ett felmeddelande.
+    throw new Error("HTTP-fel!");
   }
 
-  const data = await response.json(); //Översätter till JSON format.
-  artistsData = data.items; //sparar artist datan i en variabel.
-  entries = data.includes.Entry; //Sparar annan information i variabel så som stage, genre, day etc.
+  const data = await response.json();
+  artistsData = data.items;
+  entries = data.includes.Entry;
 
-  populateFilters(entries); //Fyller på filter dropdown menyerna med informationen som sparades i variabeln entries.
-  renderArtists(); //Visa korten i HTML
+  populateFilters(entries);
+  renderArtists();
 };
 
 const populateFilters = (entries) => {
