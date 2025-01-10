@@ -1,0 +1,27 @@
+
+
+För högre betyg
+För att få högre betyg ska alla krav för godkänt vara uppfyllda, och dessutom:
+
+Kodkvalitet:
+Mycket välstrukturerad och semantisk kod.
+Inga onödiga kommentarer i koden.
+Använd Prettier eller liknande verktyg för att säkerställa konsekvent kodformattering.
+
+Användarupplevelse:
+Möjlighet att filtrera fram artister baserat på genre, dag eller scen. Som användare ska vi kunna välja filter i antingen en drop-down, eller via en knapp. 
+
+
+
+Bedömningskriterier
+
+Design och struktur:
+Om layouten är genomtänkt och responsiv.
+Om semantisk HTML och CSS används effektivt.
+
+Funktionalitet:
+Om dynamisk data hämtas korrekt från API:et.
+Om all relaterad data visas korrekt.
+
+Kodkvalitet:
+Om koden är välorganiserad, semantisk och lättläst.

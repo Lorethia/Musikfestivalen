@@ -1,0 +1,204 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.bodyHome,
+.bodyArtist {
+  display: flex;
+  flex-direction: column;
+  padding: 0%;
+  margin: 0%;
+  min-height: 100vh;
+  align-items: center;
+  background-image: url(Images/PatternedAI-free-image-1735842854092.png);
+}
+
+header {
+  display: flex;
+  background-image: url(Images/headerIMG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  margin: 0%;
+  height: 200px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(223, 223, 223);
+  text-align: center;
+  font-family: monospace;
+  font-variant: small-caps;
+}
+
+header h1 {
+  font-size: 30pt;
+  /* text-shadow: 2px 2px rgb(212, 14, 117); */
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  color: rgba(240, 248, 255, 0);
+}
+
+.mainArtists {
+  display: flex;
+  background: linear-gradient(#0a0130df, #28015389);
+  margin: 0%;
+  padding: 1rem;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(191, 54, 111);
+  font-family: Verdana;
+  height: 100%;
+  width: 100%;
+}
+
+.mainHome {
+  display: flex;
+  background: linear-gradient(#0a0130df, #28015389);
+  margin: 0%;
+  justify-content: center;
+  font-family: Verdana;
+  height: 100vh;
+  width: 100%;
+}
+
+#description {
+  display: flex;
+  margin: 2rem;
+  padding: 5rem 1rem;
+  flex-direction: column;
+  color: rgb(223, 223, 223);
+  font-family: monospace;
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0) 0%,
+      rgb(0, 0, 0) 60%
+    ),
+    url(https://visitsweden.com/_next/image/?url=https%3A%2F%2Fs3-eu-north-1.amazonaws.com%3A443%2Fpy3.visitsweden.com%2Foriginal_images%2FWayOutWest2-IBSweb.jpg&w=1980&q=75);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-color: rgba(0, 0, 0, 0.504);
+  border-radius: 15px;
+  gap: 1rem;
+  text-align: center;
+  align-content: center;
+  max-width: 1000px;
+  box-shadow: rgba(0, 0, 0, 0.467) 2px 2px 15px 1px;
+}
+
+#cardContainer {
+  display: flex;
+  justify-content: center;
+  margin: 0%;
+  padding: 1rem;
+  flex-wrap: wrap;
+  color: rgb(223, 223, 223);
+  font-family: monospace;
+  gap: 1rem;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.artistCard {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 15px;
+  color: rgb(223, 223, 223);
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.504);
+  gap: 1rem;
+  max-width: 800px;
+}
+
+.artistCard:hover,
+.artistCard h2:hover {
+  background-color: rgb(0, 0, 0);
+  transform: scale(110%);
+  color: rgb(255, 53, 151);
+}
+
+#artistName,
+#titleArtist {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bolder;
+}
+
+footer {
+  display: flex;
+  background-color: rgba(4, 0, 52, 0.862);
+  color: rgb(223, 223, 223);
+  font-family: monospace;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: rgb(86, 142, 142);
+}
+
+.footerLinks a:hover {
+  text-decoration: none;
+  color: rgb(255, 53, 151);
+}
+
+.artistTitle {
+  display: inline;
+}
+
+/*Break-points*/
+
+@media (min-width: 1000px) {
+  header {
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+  header h1 {
+    font-size: 60pt;
+    text-shadow: none;
+    -webkit-text-stroke-color: 3px black;
+  }
+  header h2 {
+    font-size: 30pt;
+  }
+
+  .mainHome {
+    flex-direction: row;
+    width: 100%;
+    padding-right: 200px;
+  }
+  .mainArtists {
+    height: 100%;
+    width: 100%;
+  }
+
+  footer {
+    font-size: 12pt;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  p {
+    font-size: 14px;
+  }
+  .artistCard {
+    max-width: 300px;
+  }
+  #cardContainer {
+    padding: 1rem 160px 1rem 1rem;
+  }
+}

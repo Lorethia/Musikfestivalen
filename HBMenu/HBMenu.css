@@ -1,0 +1,102 @@
+/* Innehåll av länkar */
+#topnav {
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1000;
+}
+
+.topnav #myLinks {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: black;
+  flex-direction: column;
+  width: 100%;
+}
+
+.topnav a {
+  color: rgb(223, 223, 223);
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: rgb(0, 0, 0);
+  z-index: 9999;
+}
+
+/* hamburger menu */
+.logo {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+.topnav a.icon {
+  padding: 14px 16px;
+  background: rgb(0, 0, 0);
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.topnav a:hover {
+  color: rgb(255, 53, 151);
+}
+
+.active {
+  color: rgb(223, 223, 223);
+}
+
+/* Sidomeny */
+.sidemenu {
+  display: none;
+  height: 400px;
+  width: 200px;
+  position: absolute;
+  top: 200px;
+  right: 0%;
+  background-color: rgba(0, 0, 0, 0.504);
+  padding-top: 20px;
+  border-bottom-left-radius: 15px;
+}
+
+.sidemenu a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(223, 223, 223);
+  display: block;
+  font-family: monospace;
+  text-align: center;
+}
+
+.sidemenu a:hover {
+  color: rgb(255, 53, 151);
+}
+
+/* Break Points */
+@media screen and (min-width: 1000px) {
+  #topnav {
+    display: none;
+  }
+
+  .sidemenu {
+    display: block;
+  }
+  .topnav a.icon {
+    display: none;
+  }
+}

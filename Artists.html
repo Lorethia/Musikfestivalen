@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="HBMenu/HBMenu.css" />
+    <!-- <link rel="stylesheet" href="filterArtists.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="bodyArtist">
+    <header>
+      <h1>Stockholm Music Festival</h1>
+      <h2>June 6th-8th</h2>
+      <div class="topnav">
+        <div id="myLinks">
+          <a href="index.html">Home</a>
+          <a href="Artists.html">Artists</a>
+          <a href="#Tickets">Tickets</a>
+          <a href="#scheduleLocation">Schedule & Locations</a>
+          <a href="#contactUs">Contact Us</a>
+        </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="HBmenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </header>
+
+    <main class="mainArtists">
+      <div id="filters">
+        <label for="genreFilter">Genre:</label>
+        <select id="genreFilter">
+          <option value="">All</option>
+        </select>
+
+        <label for="dayFilter">Day:</label>
+        <select id="dayFilter">
+          <option value="">All</option>
+        </select>
+
+        <label for="stageFilter">Stage:</label>
+        <select id="stageFilter">
+          <option value="">All</option>
+        </select>
+      </div>
+      <div id="cardContainer">
+        <h2 class="artistTitle">Artists</h2>
+      </div>
+
+      <div class="sidemenu" id="mySidemenu">
+        <a href="index.html">Home</a>
+        <a href="Artists.html">Artists</a>
+        <a href="#Tickets">Tickets</a>
+        <a href="#scheduleLocation">Schedule & Locations</a>
+        <a href="#contactUs">Contact Us</a>
+      </div>
+    </main>
+    <footer>
+      <p>©Stockholm City 2025</p>
+      <div class="footerLinks">
+        <a href="">Terms and Conditions</a>
+        <a href="">FAQ</a>
+      </div>
+    </footer>
+
+    <script src="indexAPI3.js"></script>
+    <script src="HBMenu/HBMenu.js"></script>
+  </body>
+</html>
